@@ -22,7 +22,7 @@ if [ ! -f "${MY_FILES}/ca.crt" ]; then
     openssl x509 -req -days 365000 \
     -in device.csr -CA ca.crt -CAkey ca.key -CAcreateserial \
     -extfile <(printf "subjectAltName=DNS:${DOMAIN}") \
-    -out server.crt
+    -out device.crt
     # openssl genrsa -out device.key 2048
     # openssl req -new -key device.key -subj "/CN=${DOMAIN}" -addext "subjectAltName = DNS:${DOMAIN}" -out device.csr
     # openssl x509 -req -in device.csr -CA base.pem -CAkey base.key -CAcreateserial -days 10000 -out device.crt
