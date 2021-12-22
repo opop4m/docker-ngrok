@@ -1,6 +1,7 @@
 FROM golang:1.7
 
-
+RUN apt-get -qq update \
+    && apt-get -qq install -y --no-install-recommends ca-certificates curl
 # RUN git clone https://github.com/tutumcloud/ngrok.git /ngrok
 RUN git clone https://github.com/inconshreveable/ngrok.git --depth=1 /ngrok
 
