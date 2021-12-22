@@ -1,12 +1,7 @@
 # DOCKER NGROK IMAGE
 
-## BUILD IMAGE
+only fix some bugs for https://github.com/hteen/docker-ngrok.git
 
-```linux
-git clone https://github.com/hteen/docker-ngrok.git
-cd docker-ngrok
-docker build -t hteen/ngrok .
-```
 
 ## RUN
 * you must mount your folder (E.g `/data/ngrok`) to container `/myfiles`
