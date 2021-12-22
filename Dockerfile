@@ -1,0 +1,19 @@
+FROM golang:1.7
+
+
+# RUN git clone https://github.com/tutumcloud/ngrok.git /ngrok
+RUN git clone https://github.com/inconshreveable/ngrok.git --depth=1 /ngrok
+
+ADD *.sh /
+
+ENV DOMAIN **None**
+ENV MY_FILES /myfiles
+ENV TUNNEL_ADDR :4443
+ENV HTTP_ADDR :80
+ENV HTTPS_ADDR :443
+
+EXPOSE 4443
+EXPOSE 80
+EXPOSE 443
+
+CMD /bin/sh
