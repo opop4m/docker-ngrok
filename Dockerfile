@@ -1,4 +1,4 @@
-FROM golang:1.7
+FROM golang:1.17
 
 RUN apt-get -qq update \
     && apt-get -qq install -y --no-install-recommends ca-certificates curl
