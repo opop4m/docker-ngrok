@@ -32,7 +32,7 @@ cp -r ca.crt /ngrok/assets/client/tls/ngrokroot.crt
 
 cd /ngrok
 
-go env GO111MODULE=off
+go env -w GO111MODULE=off
 git config --global http.sslverify false
 
 make release-server
