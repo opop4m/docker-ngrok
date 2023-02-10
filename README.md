@@ -1,6 +1,5 @@
 # DOCKER NGROK IMAGE
 
-only fix some bugs for https://github.com/hteen/docker-ngrok.git
 
 
 ## RUN
