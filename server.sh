@@ -12,4 +12,4 @@ if [ ! -f "${MY_FILES}/bin/ngrokd" ]; then
 fi
 
 
-${MY_FILES}/bin/ngrokd -tlsKey=${MY_FILES}/ca.key -tlsCrt=${MY_FILES}/device.crt -domain="${DOMAIN}" -httpAddr=${HTTP_ADDR} -httpsAddr=${HTTPS_ADDR} -tunnelAddr=${TUNNEL_ADDR}
+${MY_FILES}/bin/ngroxd -tlsKey=${MY_FILES}/ca.key -tlsCrt=${MY_FILES}/device.crt -domain="${DOMAIN}" -httpAddr=${HTTP_ADDR} -httpsAddr=${HTTPS_ADDR} -tunnelAddr=${TUNNEL_ADDR}
