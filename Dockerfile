@@ -3,7 +3,7 @@ FROM golang:1.17
 RUN apt-get -qq update \
     && apt-get -qq install -y --no-install-recommends ca-certificates curl
 # RUN git clone https://github.com/tutumcloud/ngrok.git /ngrok
-RUN git clone https://github.com/inconshreveable/ngrok.git --depth=1 /ngrok
+RUN git clone https://github.com/ngrox-io/ngrox.git --depth=1 /ngrok
 
 ADD *.sh /
 

@@ -32,17 +32,17 @@ cp -r ca.crt /ngrok/assets/client/tls/ngrokroot.crt
 
 cd /ngrok
 
-go env -w GO111MODULE=off
+# go env -w GO111MODULE=off
 git config --global http.sslverify false
 
 make release-server
-GOOS=linux GOARCH=386 make release-client
-GOOS=linux GOARCH=amd64 make release-client
-GOOS=linux GOARCH=arm make release-client
-GOOS=windows GOARCH=386 make release-client
-GOOS=windows GOARCH=amd64 make release-client
-GOOS=darwin GOARCH=amd64 make release-client
-GOOS=darwin GOARCH=arm64 make release-client
+GOOS=linux GOARCH=386 make release-client ARG_CLIENT_RELEASE=bin/ngrox_386
+GOOS=linux GOARCH=amd64 make release-client ARG_CLIENT_RELEASE=bin/ngrox_amd64
+# GOOS=linux GOARCH=arm make release-client ARG_CLIENT_RELEASE=bin/ngrox_386
+# GOOS=windows GOARCH=386 make release-client ARG_CLIENT_RELEASE=bin/ngrox_386
+GOOS=windows GOARCH=amd64 make release-client ARG_CLIENT_RELEASE=bin/ngrox_amd64_win
+GOOS=darwin GOARCH=amd64 make release-client ARG_CLIENT_RELEASE=bin/ngrox_amd64_mac
+GOOS=darwin GOARCH=arm64 make release-client ARG_CLIENT_RELEASE=bin/ngrox_arm64_mac
 
 
 cp -r /ngrok/bin ${MY_FILES}/bin
