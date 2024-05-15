@@ -6,8 +6,8 @@ if [ "${DOMAIN}" == "**None**" ]; then
     exit 1
 fi
 
-if [ ! -f "${MY_FILES}/bin/ngrokd" ]; then
-    echo "ngrokd is not build,will be build it now..."
+if [ ! -f "${MY_FILES}/bin/ngroxd" ]; then
+    echo "ngroxd is not build,will be build it now..."
     /bin/sh /build.sh
 fi
 
