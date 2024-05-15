@@ -28,7 +28,8 @@ if [ ! -f "${MY_FILES}/ca.crt" ]; then
     # openssl x509 -req -in device.csr -CA base.pem -CAkey base.key -CAcreateserial -days 10000 -out device.crt
 fi
 
-cp -r ca.crt /ngrok/assets/client/tls/ngrokroot.crt
+# cp -r ca.crt /ngrok/assets/client/tls/ngrokroot.crt
+cp -r ca.crt /ngrok/internal/client/assets/tls/ngroxroot.crt
 
 cd /ngrok
 
