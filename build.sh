@@ -29,7 +29,7 @@ if [ ! -f "${MY_FILES}/ca.crt" ]; then
 fi
 
 # cp -r ca.crt /ngrok/assets/client/tls/ngrokroot.crt
-cp -r ca.crt /ngrok/internal/client/assets/tls/ngroxroot.crt
+cp -r ${MY_FILES}/ca.crt /ngrok/internal/client/assets/tls/ngroxroot.crt
 
 cd /ngrok
 
