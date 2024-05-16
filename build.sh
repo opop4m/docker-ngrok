@@ -30,6 +30,8 @@ fi
 
 # cp -r ca.crt /ngrok/assets/client/tls/ngrokroot.crt
 cp -r ${MY_FILES}/ca.crt /ngrok/internal/client/assets/tls/ngroxroot.crt
+cp ${MY_FILES}/device.crt /ngrok/internal/server/assets/tls/snakeoil.crt
+cp ${MY_FILES}/device.key /ngrok/internal/server/assets/tls/snakeoil.key
 
 cd /ngrok
 
